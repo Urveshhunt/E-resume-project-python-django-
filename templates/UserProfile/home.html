@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!--Preloader Start-->
+<div class="preloader">
+    <div class="loader">
+        <!--Your Name-->
+        {% if request.user.is_authenticated %}
+        <h4>{{user.first_name}} {{user.last_name}}</h4>
+        {% endif %}
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--Preloader End-->
+<!--Main Start-->
+
+<div id="main" class="site-main">
+    <!--Banner Section Start-->
+    <section id="home" class="banner-section pt-page" style="background-image: url('static/img/background/home-bg.jpg')">
+
+        <div class="banner-content">
+            <!--Banner Text-->
+            {% if request.user.is_authenticated %}
+            <h1 class="mb-20">{{user.first_name}} <span>{{user.last_name}}</span></h1>
+            {% endif %}
+            <!--Animated Text-->
+            <p class="cd-headline clip is-full-width">
+            <span>I am a </span>
+            <span class="cd-words-wrapper">
+                <b class="is-visible">Graphics Designer</b>
+                <b>Freelancer</b>
+                <b>Web Developer</b>
+                <b>UI/UX Designer</b>
+            </span>
+            </p>
+
+        </div>
+
+    </section>
+    <!--Banner Section End-->
+
+
+    <!--About Section Start
+    About Section Start-->
+
+
+    <!--Resume Section Start-->
+    <!--Resume Section End-->
+
+
+    <!--Porfolio Section Start-->
+    <!--Porfolio Section End-->
+
+
+    <!--Blog Section Start-->
+    <!--Blog Section End-->
+
+
+    <!--Contact Section Start-->
+    <!--Contact Section End-->
+
+
+
+<!--Main End-->
+</div>
+{% endblock %}
+

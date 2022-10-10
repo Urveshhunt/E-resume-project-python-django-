@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div id="main" class="site-main">
+    
+    <form method="post">
+        {% csrf_token %}
+        <label>First Name</label>
+        {{User_reg.first_name}}
+
+        <label>Last Name</label>
+        {{User_reg.last_name}}
+
+        <label>User Name</label>
+        {{User_reg.username}}
+        
+        <label>Email Id</label>
+        {{User_reg.email}}
+        
+        <label>Password</label>
+        {{User_reg.password1}}
+        
+        <label>Confirm Password</label>
+        {{User_reg.password2}}
+        
+        <input type="submit" name="submit" value="Save"/>
+    </div>
+    </form>
+</div>
+{% endblock %}

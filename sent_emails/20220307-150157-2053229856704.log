@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: sanketpsuthar31@gmail.com
+Date: Mon, 07 Mar 2022 09:31:57 -0000
+Message-ID: <164664551720.7672.10961367911907336927@LAPTOP-18CC3V21>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/Mg/b1x8f8-88d2c630507cecc6691e121d1cbf3d7d/
+
+Your username, in case you’ve forgotten: sanket
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

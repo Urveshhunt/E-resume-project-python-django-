@@ -1,0 +1,70 @@
+{% load static %}
+<header>
+    <div class="header-content">
+
+        <!--Mobile Header-->
+        <div class="header-mobile">
+            <a class="header-toggle"><i class="fas fa-bars"></i></a>
+            
+            <h2>Philip Watson</h2>
+        </div>
+
+        <!--Main Header-->
+        <div class="header-main" data-simplebar>
+            <div class="image-container">
+                {% if request.user.is_authenticated %}
+                <h2 class="header-name">{{user.first_name}} {{user.last_name}}</h2>
+                {% if request.user.is_staff %}
+                <span>Company{{ User.Company.CompanyProfile }}</span>
+                {% else %}
+
+                <span>User</span>
+                {% endif %}
+                {% endif %}
+                {% if request.user.is_staff %}
+                <img src="{{ user.company.Company_logo.url }}">
+                {% else %}
+                <img src="{{ user.userinfo.profile_pic.url }}">
+                {% endif %}
+                
+            </div>
+
+            
+<nav class="nav-menu">
+    <ul>
+        {% if request.user.is_staff %}
+        <li><a href="{% url 'dashbord' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Home </a> </li>
+        <li><a href="{% url 'CompanyProfile' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Profile</a></li>
+        <li><a href="{% url 'changepassword' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Change Password</a> </li>
+        <li><a href="{% url 'searchEmp' %}?q=123456789" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Find Employee </a> </li>
+        <li><a href="{% url 'userLogout' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-envelope"></i></span>Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'dashbord' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Home </a> </li>
+        <li><a href="{% url 'UserProfile' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Profile</a></li>    
+        <li><a href="{% url 'About_us' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-user"></i></span>About Me</a></li>
+        <li><a href="{% url 'Resume' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-license"></i></span>Resume</a></li>
+        <li><a href="{% url 'changepassword' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>Change Password</a> </li>
+        <li><a href="{% url 'Feedbackindex' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-home"></i></span>FeedBack</a> </li>
+        <li><a href="{% url 'userLogout' %}" class="pt-link"><span class="nav-menu-icon"><i class="lnr lnr-envelope"></i></span>Logout</a></li>
+        {% endif %}
+    </ul>
+</nav>
+
+<div class="nav-footer">
+    <!--Social Links-->
+    <ul class="social">
+        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-dribbble-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-behance-square"></i></a></li>
+    </ul>
+    <!--Copyright Text-->
+    <div class="copy">
+        <p>2021 &copy; Cosmos-Themes.<br>All Right Reserved.</p>
+    </div>
+</div>
+
+</div>
+</div>
+</header>

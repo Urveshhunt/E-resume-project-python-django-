@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div id="main" class="site-main">
+<section id="about" class="about-section pt-page">
+    <div class="section-container">
+        <!--Page Heading-->
+        <div class="page-heading">
+            <span class="icon"><i class="lnr lnr-user"></i></span>
+            
+            <h2> About Me.</h2>
+            
+        </div>
+
+        <!-- About Info Row Start-->
+        <div class="row about mb-70">
+
+            <div class="col-lg-8">
+                 
+                <!--Personal Intro-->
+                {% for i in about_data %}
+                <h3 class="mb-20">You Are {{i.skill}} Developer</h3>
+                
+                <h3>About</h3>
+                <p>{{i.About}}</p>
+                
+
+
+                
+                <h3>Phone Number</h3>
+                <p>{{i.phone_number}}</p>
+                
+
+                <h3>Address</h3>
+                <p>{{i.address}}</p>
+
+
+                
+                <h3>Gender</h3>
+                {% if i.gender == "M" %}
+                <p>Male</p>
+                {% else %}
+                <p>Female</p>
+                {% endif %}
+
+                
+                <h3>skill</h3>
+                {% for j in about_data %}
+                <p>{{ j.skill }}</p>
+                {% endfor %}
+
+
+                {% endfor %}
+                <!--Signature Image-->
+                <div class="signature mt-20">
+                    <img src="{% static 'img/signature-white.png' %}" alt="">
+                </div>
+            </div>
+
+            <!--Personal Info-->
+            
+        </div>
+        <!-- About Info Row End-->
+
+        <!--Services Row Start-->
+    
+    
+    </div>
+</section>
+</div>
+{% endblock %}

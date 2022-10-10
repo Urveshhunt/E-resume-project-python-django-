@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div id="main" class="site-main">
+  <section id="contact" class="contact-section pt-page">
+    <div class="section-container">
+      <!--Page Heading-->
+      <div class="page-heading">
+        <span class="icon"><i class="lnr lnr-envelope"></i></span>
+        <h2>Search Your Data.</h2>
+      </div>
+
+      <!--Form Row-->
+      <div class="row mb-70">
+        <div class="col-lg-8 offset-lg-2">
+          <!--Form Start-->
+          <form method="get" action="{% url 'searchEmp' %}?q=1">
+            <div class="row">
+              <!--Name Field-->
+              <div class="col-md-6 mb-50">
+                <span class="input">
+                  <input
+                    class="input__field cf-validate"
+                    type="text"
+                    id="cf-name"
+                    name="q"
+                  />
+                  <input
+                    type="submit"
+                    id="cf-submit"
+                    class="btn-main"
+                    value="Search Data"
+                  />
+                  <label class="input__label" for="cf-name">Enter Data</label>
+                </span>
+              </div>
+
+              {{ msg }}
+            </div>
+            
+            <table border="2px">
+              <th>About</th>
+              <th>Category</th>
+              <th>Phone Number</th>
+              <th>Address</th>
+              <th>Gender</th>
+              <th>SCSS Percentage</th>
+              <th>School Name</th>
+              <th>HSCCS Percentage</th>
+              <th>HSCCS School</th>
+              <th>Dgree</th>
+              <th>College Name</th>
+              <tr>
+                <td>{{object_list.About}}</td>
+                <td>{{object_list.category}}</td>
+                <td>{{object_list.phone_number}}</td>
+                <td>{{object_list.address}}</td>
+                <td>{{object_list.gender}}</td>
+                <td>{{object_list.sccs}}</td>
+                <td>{{object_list.sschool_name}}</td>
+                <td>{{object_list.hsccs}}</td>
+                <td>{{object_list.hschool_name}}</td>
+                <td>{{object_list.dgree}}</td>
+                <td>{{object_list.college_name}}</td>
+              </tr>
+            </table>
+          </form>
+          <!--Form End-->
+        </div>
+      </div>
+
+      <!--Contact Info Row Start-->
+    </div>
+  </section>
+</div>
+{% endblock %}

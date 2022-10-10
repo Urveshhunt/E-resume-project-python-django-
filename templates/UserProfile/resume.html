@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div id="main" class="site-main">
+<section id="resume" class="resume-section pt-page">
+    <div class="section-container">
+        <div class="page-heading">
+            <span class="icon"><i class="lnr lnr-license"></i></span>
+            <h2>My Resume.</h2>
+        </div>
+
+        <!--Education & Experience Row Start-->
+        <div class="row mb-20">
+
+            <!--Experience Column Start-->
+            <div class="col-lg-6">
+                <div class="subheading">
+                    <h3>Experience</h3>
+                </div>
+                <ul class="experience">
+
+                    <!--Experience Item-->
+                    <li>
+                        <span class="line-left"></span>
+                        <div class="content">
+                            <h4>Lead UI Designer</h4>
+                            <h5>Big Design Company, NY, USA</h5>
+                            <p class="info">
+                                Sit cupiditate praesentium ex esse nulla Facere fuga perspiciatis eveniet provident neque Ea ratione non minus temporibus ipsum Sunt minima
+                            </p>
+                        </div>
+                        <span class="year">
+                            <span class="to">2018</span>
+                            <span class="from">2016</span>
+                        </span>
+                    </li>
+
+                    <!--Experience Item-->
+                    
+
+                    <!--Experience Item-->
+                    
+
+                </ul>
+            </div>
+            <!--Experience Column End-->
+
+            <!--Education Column Start-->
+            <div class="col-lg-6">
+                <div class="subheading">
+                    <h3>Education</h3>
+                </div>
+
+                <ul class="education">
+
+                    <!--Education Item-->
+                    <li>
+                        <span class="line-left"></span>
+                        <div class="content">
+                            <h4>SSC</h4>
+                        {% for i in resume_data %}
+                            <h5>School Name: {{ i.sschool_name  }}</h5>
+                            
+                            <p class="info">
+                                Precent {{ i.sccs }}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        
+                    </li>
+
+                    <!--Education Item-->
+                    <li>
+                        <span class="line-left"></span>
+                        <div class="content">
+                            <h4>HHC</h4>
+                            {% for i in resume_data %}
+                            <h5>School Name: {{ i.hschool_name  }}</h5>
+                            
+                            <p class="info">
+                                Precent {{ i.hsccs }}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        
+                    </li>
+
+                    <!--Education Item-->
+                    <li>
+                        <span class="line-left"></span>
+                        <div class="content">
+                            <h4>Dgree</h4>
+                            {% for i in resume_data %}
+                            <h5>college Name: {{ i.college_name  }}</h5>
+                            
+                            <p class="info">
+                                 {{ i.dgree }}
+                            </p>
+                            {% endfor %}
+                        </div>
+                        
+                    </li>
+
+                </ul>
+            </div>
+            <!--Education Column End-->
+
+        </div>
+        <!--Education & Experience Row End-->
+
+
+        <!--Skills Row Start-->
+        
+    </div>
+</section>
+</div>
+{% endblock %}

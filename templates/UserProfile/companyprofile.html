@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% load static %}
+{% block content %}
+
+
+<div id="main" class="site-main">
+  <!--Contact Section Start-->
+  <section id="contact" class="contact-section pt-page">
+    <div class="section-container">
+
+        <!--Page Heading-->
+        <div class="page-heading">
+            <span class="icon"><i class="lnr lnr-envelope"></i></span>
+            <h2>Update Profile.</h2>
+        </div>
+
+        <!--Form Row-->
+        <div class="row mb-70">
+            <div class="col-lg-8  offset-lg-2">
+                <div class="subheading">
+                    <h3>Update Your Profile</h3>
+                </div>
+
+                <!--Form Start-->
+                <form  method="post" action="" enctype="multipart/form-data">
+                    <div class="row">
+                        {% csrf_token %}
+                      
+                        <!--Name Field-->
+                        <div class="col-md-6 mb-50">
+                            <label>About Your Company:</label>
+                            {{ formdata.About }}
+
+                            <!-- <span class="input">
+                                <input class="input__field cf-validate" type="text" id="cf-name" name="name" />
+                                <label class="input__label" for="cf-name">Name</label>
+                            </span> -->
+                        </div>
+
+                        <!--Email Field-->
+                        <div class="col-md-6 mb-50">
+                            <label>Update Your Logo:</label>
+                            {{ formdata.Company_logo }}
+                            <!-- <span class="input">
+                                <input class="input__field cf-validate" type="text" id="cf-email" name="email" />
+                                <label class="input__label" for="cf-email">Email</label>
+                            </span> -->
+                        </div>
+
+
+
+                        <!--Email Field-->
+                        <div class="col-md-6 mb-50">
+                            <label>Category:</label>
+                            {{ formdata.category }}
+                            <!-- <span class="input">
+                                <input class="input__field cf-validate" type="text" id="cf-email" name="email" />
+                                <label class="input__label" for="cf-email">Email</label>
+                            </span> -->
+                        </div>
+
+                        <div class="col-md-6 mb-50">
+                            <label>Address:</label>
+                            {{ formdata.address }}
+                            <!-- <span class="input">
+                                <input class="input__field cf-validate" type="text" id="cf-email" name="email" />
+                                <label class="input__label" for="cf-email">Email</label>
+                            </span> -->
+                        </div>
+
+                        <div class="col-md-6 mb-50">
+                            <label>Phone Number:</label>
+                            {{ formdata.phone_number }}
+                            <!-- <span class="input">
+                                <input class="input__field cf-validate" type="text" id="cf-email" name="email" />
+                                <label class="input__label" for="cf-email">Email</label>
+                            </span> -->
+                        </div>
+
+
+                        <div class="col-md-6 mb-50">
+                            <label>Skill:</label>
+                            {{ formdata.skill }}
+                            <!-- <span class="input">
+                                <input class="input__field cf-validate" type="text" id="cf-email" name="email" />
+                                <label class="input__label" for="cf-email">Email</label>
+                            </span> -->
+                        </div>
+
+                      
+
+                        <!--Submit Button-->
+                        <div class="col-md-12 text-center">
+                           <!-- <a href="{% url 'RequestUpdateProfileCompany' %}" id="cf-submit" class="btn-main">Request For Update Your Profile</a> -->
+                             <input type="submit" id="cf-submit" class="btn-main" value="Update Your Profile">  
+                        </div>
+
+
+                    </div>
+                </form>
+                <!--Form End-->
+
+            </div>
+        </div>
+
+        <!--Contact Info Row Start-->
+        <div class="row contact-info mb-70">
+
+            <!--Contact Info Item-->
+            <div class="col-md-4 info-item">
+                <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                <h5><a href="mailto:example@example.com">example@example.com</a></h5>
+            </div>
+
+            <!--Contact Info Item-->
+            <div class="col-md-4 info-item">
+                <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                <h5>123 Lorem Ipsum, USA</h5>
+            </div>
+
+            <!--Contact Info Item-->
+            <div class="col-md-4 info-item">
+                <span class="icon"><i class="fas fa-phone"></i></span>
+                <h5>(+1) 123 456 7890</h5>
+            </div>
+
+        </div>
+        <!--Contact Info Row End-->
+
+    </div>
+  
+</section>
+<!--Contact Section End-->    
+</div>
+
+
+{% endblock %}

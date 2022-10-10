@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-random-animation="false" data-animation="11">
+    
+<!-- Mirrored from watson-vcard.netlify.app/index-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Mar 2022 07:32:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="vcard, resume, personal, portfolio, cv, card, responsive" />
+        <meta name="description" content="vCard / Resume / Personal Template" />
+        <meta name="author" content="cosmos-themes" />
+
+        <!--Page Title-->
+        <title>Degital Resume / CV Template</title>
+
+        <!--Plugins Css-->
+        <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+        <!--Main Styles Css-->
+        <link rel="stylesheet" href="{% static 'css/style-dark.css' %}">
+
+        <link rel="stylesheet" href="{% static 'css/style-demo.css' %}">
+
+        <!--Color Css-->
+        <link class="site-color" rel="stylesheet" href="{% static 'css/blue-color.css' %}">
+
+        <!--Modernizr Js-->
+        <script src="{% static 'js/modernizr.js' %}"></script>
+
+        <!--Favicons-->
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122650090-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-122650090-3');
+        </script>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color:black;
+    }
+    </style>
+    </head>
+
+    <body>
+
+        
+
+<div id="page">
+
+            <!--Header Start-->
+                        <!--Nav Menus-->
+        {% include 'nav.html' %}
+                        <!--Nav Footer-->
+                        
+            <!--Header End-->
+
+
+{% block content %} {% endblock %}
+</div>
+<!--Ajax Portfolio Container Start-->
+<div class="ajax-portfolio-popup">
+    <span class="ajax-loader"></span>
+    <div class="navigation-wrap">
+        <span class="popup-close"><i class="fas fa-times-circle"></i></span>
+    </div>
+    <div class="content-wrap">
+        <div class="popup-content"></div>
+    </div>
+</div>
+<!--Ajax Portfolio Container End-->
+
+<!--Jquery JS-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!--Plugins JS-->
+<script src="{% static 'js/plugins.min.js' %}"></script>
+<!--Google Map Api-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key="></script>
+<!--Site Main JS-->
+<script src="{% static 'js/main.js' %}"></script>
+
+<script src="{% static 'js/main-demo.js' %}"></script>
+
+</body>
+
+<!-- Mirrored from watson-vcard.netlify.app/index-dark.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 01 Mar 2022 07:33:46 GMT -->
+</html>
+
+
+
